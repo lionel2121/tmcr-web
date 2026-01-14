@@ -1,6 +1,6 @@
 /* 
    TMCR IMPORT AND COURIER
-   Archivo de Lógica (Versión Definitiva - Integrada)
+   Archivo de Lógica (Versión Final - Conectada)
 */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
         setInterval(rotateStores, 4000); 
     }
 
-    // --- 3. TESTIMONIOS MASIVOS Y REALISTAS ---
+    // --- 3. TESTIMONIOS MASIVOS ---
     const reviewContainer = document.getElementById('testimonials-container');
     const testimonials = [
         { name: "Carlos Monge", text: "Excelente servicio, mis repuestos llegaron súper rápido." },
@@ -138,38 +138,97 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // --- 6. CARRUSEL INFORMATIVO (NUEVO) ---
-    // Este código maneja las imágenes de respaldo al final de la página
+    // --- 6. CARRUSEL INFORMATIVO (IMÁGENES RESPALDO) ---
     const infoCarousel = document.getElementById('info-carousel');
     if (infoCarousel) {
-        // Lista de imágenes de respaldo (asegurándonos que sean .jpeg)
         const infoImages = [
             'imagenes/camioneta-servicios.jpeg',
             'imagenes/info-resumen.jpeg',
             'imagenes/dibujo-simple.jpeg'
         ];
         let infoIndex = 0;
-
-        // Cambiar imagen cada 20 segundos
         setInterval(() => {
             infoIndex = (infoIndex + 1) % infoImages.length;
-            
-            // 1. Desvanecer la imagen actual (Fade Out)
             infoCarousel.style.opacity = '0';
-            
-            // 2. Esperar 0.5 seg a que se desvanezca y cambiar la fuente
             setTimeout(() => {
                 infoCarousel.src = infoImages[infoIndex];
-                // 3. Aparecer la nueva imagen (Fade In)
                 infoCarousel.style.opacity = '1';
             }, 500); 
         }, 20000); 
     }
 
+    // --- 7. REGISTRO Y CONEXIÓN GOOGLE SHEETS (CON ENLACE OFICIAL) ---
+    const lockerForm = document.getElementById('locker-form');
+    const lockerResult = document.getElementById('locker-result');
+    const submitBtn = document.getElementById('submit-btn');
+    
+    // ENLACE DEL SCRIPT DE GOOGLE (El que tú generaste)
+    const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxYPAN9yX4ewQ5rXvHLRMVVqNLOf9ZJHHflWp1lxqSLWpExN7e6J8bb-3KoU8uhXA5EFA/exec';
+
+    if(lockerForm) {
+        lockerForm.addEventListener('submit', function(e) {
+            e.preventDefault(); // Evita recarga de página
+            
+            // 1. Mostrar estado de carga (Feedback visual)
+            const originalBtnText = submitBtn.innerHTML;
+            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Registrando...';
+            submitBtn.disabled = true;
+            submitBtn.classList.add('opacity-50', 'cursor-not-allowed');
+
+            // 2. Preparar los datos
+            const formData = new FormData(lockerForm);
+            // Añadimos datos extra automáticos
+            formData.append('Tipo_Casillero', 'Registro Web TMCR');
+
+            // 3. Preparar nombres para visualización
+            const name = document.getElementById('client-name').value;
+            const lastname = document.getElementById('client-lastname').value;
+            const fullName = name + ' ' + lastname;
+
+            // 4. Enviar a Google (Fetch)
+            fetch(SCRIPT_URL, { method: 'POST', body: formData })
+                .then(response => {
+                    // ÉXITO: Google recibió los datos
+                    // Actualizamos las tarjetas visuales
+                    const nameSpans = document.querySelectorAll('.dynamic-name');
+                    nameSpans.forEach(span => {
+                        span.textContent = fullName.toUpperCase();
+                    });
+                    
+                    // Mostrar sección de resultados
+                    lockerResult.classList.remove('hidden');
+                    lockerResult.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    
+                    // Actualizar botón
+                    submitBtn.innerHTML = '<i class="fas fa-check"></i> ¡Listo!';
+                    
+                    // Alerta accesible
+                    alert("¡Registro exitoso! Tus direcciones han sido generadas abajo.");
+                })
+                .catch(error => {
+                    // ERROR (Problema de red, pero igual mostramos las direcciones al cliente)
+                    console.error('Error enviando a Google:', error);
+                    
+                    const nameSpans = document.querySelectorAll('.dynamic-name');
+                    nameSpans.forEach(span => {
+                        span.textContent = fullName.toUpperCase();
+                    });
+                    
+                    lockerResult.classList.remove('hidden');
+                    lockerResult.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    
+                    submitBtn.innerHTML = originalBtnText;
+                    submitBtn.disabled = false;
+                    submitBtn.classList.remove('opacity-50', 'cursor-not-allowed');
+                    
+                    alert("Tus direcciones están listas abajo. (Nota: Hubo un error guardando en la base de datos, por favor toma captura).");
+                });
+        });
+    }
+
 });
 
-// --- 5. LOGICA DE LA CALCULADORA (Inteligente y con Colones) ---
-// Esta función debe estar FUERA del DOMContentLoaded para que el botón HTML la encuentre
+// --- 5. LOGICA DE LA CALCULADORA ---
 const EXCHANGE_RATE = 510;
 
 function parseInput(elementId) {
@@ -192,12 +251,10 @@ function calculateShipping() {
         return;
     }
 
-    // AÉREO
     let weightInLbs = (weightUnit === 'kg') ? weightInput * 2.20462 : weightInput;
     let airPriceUSD = weightInLbs * 7; 
     let airPriceCRC = airPriceUSD * EXCHANGE_RATE;
 
-    // MARÍTIMO
     let weightInKg = (weightUnit === 'lb') ? weightInput / 2.20462 : weightInput;
     let l_ft, w_ft, h_ft;
     
@@ -215,7 +272,6 @@ function calculateShipping() {
     let seaPriceCRC = seaPriceUSD * EXCHANGE_RATE;
     let seaReason = (priceByVolume > priceByWeight) ? "Cobrado por Volumen" : "Cobrado por Peso";
 
-    // RESULTADOS
     document.getElementById('result-placeholder').classList.add('hidden');
     document.getElementById('result-container').classList.remove('hidden');
 
