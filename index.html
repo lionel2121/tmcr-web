@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="TMCR Import and Courier. Agencia aduanal y logística integrada. Importación de vehículos y paquetería de Miami a Costa Rica.">
+    <title>TMCR Import and Courier | Logística Premium</title>
+    
+    <!-- Favicon (Icono de pestaña) -->
+    <link rel="icon" href="imagenes/logo-tmcr.jpeg" type="image/jpeg">
+    
+    <!-- Meta Etiquetas para Redes Sociales -->
+    <meta property="og:title" content="TMCR Import and Courier | Logística Premium">
+    <meta property="og:description" content="Traemos tus paquetes de Miami a Costa Rica. Aéreo, Marítimo y Vehículos. Casillero Gratis.">
+    <meta property="og:image" content="imagenes/logo-tmcr.jpeg">
+    <meta property="og:url" content="https://tmcr-logistica.com">
+    <meta property="og:type" content="website">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Fuentes -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Outfit:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Estilos Personalizados -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="antialiased selection:bg-yellow-400 selection:text-black">
+
+    <!-- PRELOADER -->
+    <div id="preloader">
+        <div class="relative text-center flex flex-col items-center">
+            <img src="imagenes/logo-tmcr.jpeg" alt="Logo Oficial TMCR" class="w-48 md:w-64 mb-6 rounded-xl shadow-[0_0_30px_rgba(250,204,21,0.3)] animate-pulse">
+            <div class="loader-scan"></div>
+        </div>
+        <p class="text-sky-400 font-tech tracking-[0.5em] text-sm uppercase mt-4 animate-pulse">Cargando Sistema...</p>
+    </div>
+
+    <!-- FONDO ANIMADO -->
+    <div class="bg-animation-container">
+        <svg class="floating-vehicle plane-move" width="120" height="60" viewBox="0 0 24 24" fill="currentColor"><path d="M21,16V14L13,9V3.5A1.5,1.5 0 0,0 11.5,2A1.5,1.5 0 0,0 10,3.5V9L2,14V16L10,13.5V19L8,20.5V22L11.5,21L15,22V20.5L13,19V13.5L21,16Z" /></svg>
+        <svg class="floating-vehicle ship-move" width="180" height="80" viewBox="0 0 24 24" fill="currentColor"><path d="M3.05 17.5L2 19.5H22L20.95 17.5H3.05M5.5 16L9.5 7H14.5L18.5 16H5.5M12 2V6M8.5 4.5L10 6M15.5 4.5L14 6" /></svg>
+    </div>
+
+    <!-- HEADER -->
+    <header class="fixed w-full top-0 z-50 bg-[#030712]/95 backdrop-blur-lg border-b border-sky-500/20 shadow-2xl transition-all duration-300">
+        <nav class="max-w-7xl mx-auto px-4 md:px-6 h-28 flex justify-between items-center">
+            <div class="flex flex-col cursor-default group select-none">
+                <span class="text-5xl md:text-7xl font-black font-tech text-white tracking-tighter mega-logo leading-[0.8]">TMCR</span>
+                <div class="flex gap-3 items-center mt-1">
+                    <span class="h-1 w-12 bg-yellow-400"></span>
+                    <span class="text-[10px] md:text-xs text-sky-400 tracking-[0.3em] uppercase font-bold">Import & Courier</span>
+                </div>
+            </div>
+            
+            <!-- Botones Header -->
+            <div class="flex items-center gap-3 md:gap-6">
+                <!-- Botón Rastreo -->
+                <a href="https://wa.me/50660103131?text=Hola,%20quiero%20rastrear%20mi%20paquete%20📦" class="hidden md:flex items-center gap-2 text-white border border-white/20 px-4 py-2 rounded-lg hover:border-yellow-400 hover:text-yellow-400 transition-colors text-xs uppercase font-bold tracking-wider">
+                    <i class="fas fa-search-location"></i> Rastreo
+                </a>
+
+                <a href="tel:60103131" class="flex items-center justify-center w-12 h-12 rounded-full bg-slate-800 border border-slate-600 text-sky-400 hover:bg-sky-400 hover:text-black transition-colors shadow-lg" aria-label="Llamar">
+                    <i class="fas fa-phone-alt text-xl"></i>
+                </a>
+                <a href="https://wa.me/50660103131" class="bg-yellow-400 text-black px-6 py-3 rounded-xl font-black text-sm md:text-base btn-glow-yellow pulse-action flex items-center gap-2 uppercase tracking-wide hover:bg-white transition-colors">
+                    <i class="fab fa-whatsapp text-lg"></i>
+                    <span class="hidden md:inline">WhatsApp</span>
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="relative z-10 pt-36 pb-12">
+        
+        <!-- HERO SECTION -->
+        <section class="min-h-[85vh] flex flex-col items-center justify-center px-4 md:px-8 pb-10 relative">
+            <div class="max-w-7xl w-full grid md:grid-cols-2 gap-12 items-center">
+                <!-- Texto Hero -->
+                <div class="text-left z-10 order-2 md:order-1">
+                    <div class="inline-block px-6 py-2 rounded-full border border-sky-500/50 bg-sky-500/10 text-sky-400 text-xs md:text-sm font-bold uppercase tracking-widest mb-6 animate-pulse shadow-[0_0_15px_rgba(14,165,233,0.3)]">
+                        🚀 Tu Casillero es 100% Gratis
+                    </div>
+                    
+                    <h1 class="text-5xl md:text-7xl lg:text-8xl font-black mb-8 leading-tight text-white drop-shadow-2xl font-tech">
+                        IMPORTAMOS <br>
+                        <span class="text-yellow-400 text-glow-yellow">SIN LÍMITES</span>
+                    </h1>
+
+                    <p class="text-lg text-gray-100 font-normal leading-relaxed mb-8 max-w-lg readable-text">
+                        Logística integrada con <strong>Agencia Aduanal y Almacén Fiscal propio</strong>. Traemos paquetería, carga comercial y vehículos desde Miami hasta Costa Rica.
+                    </p>
+
+                    <div class="flex flex-col sm:flex-row gap-5">
+                        <a href="#registro" class="bg-sky-500 text-black px-8 py-4 rounded-xl font-bold text-lg btn-glow-blue flex items-center justify-center gap-3 uppercase tracking-wide hover:text-white hover:bg-sky-600 transition-all">
+                            <i class="fas fa-box-open"></i> Abrir Casillero
+                        </a>
+                        <a href="#calculadora" class="px-8 py-4 rounded-xl font-bold text-lg border-2 border-slate-600 hover:border-yellow-400 hover:text-yellow-400 transition-all text-gray-200 flex items-center justify-center gap-3 uppercase tracking-wide bg-black/40 backdrop-blur-sm">
+                            <i class="fas fa-calculator"></i> Cotizar Envío
+                        </a>
+                    </div>
+                </div>
+
+                <!-- IMAGEN HERO -->
+                <div class="order-1 md:order-2 flex justify-center relative">
+                    <div class="relative w-full max-w-lg">
+                        <div class="absolute inset-0 bg-sky-500/20 blur-3xl rounded-full"></div>
+                        <img src="imagenes/tecnologia-logistica.jpeg" alt="Laptop con carritos de reparto simulando logística digital" class="relative rounded-[2rem] border-2 border-white/10 shadow-2xl hover:scale-105 transition-transform duration-500 object-cover h-[300px] md:h-[400px] w-full">
+                        
+                        <!-- Tarjeta Flotante Decorativa -->
+                        <div class="absolute -bottom-6 -left-6 bg-[#030712]/90 p-4 rounded-xl border border-yellow-400/30 shadow-xl backdrop-blur-sm flex items-center gap-4 animate-bounce" style="animation-duration: 3s;">
+                            <div class="bg-yellow-400 p-3 rounded-full text-black"><i class="fas fa-box-check"></i></div>
+                            <div>
+                                <p class="text-white font-bold text-sm">Entregas GAM</p>
+                                <p class="text-gray-400 text-xs">Incluidas</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- BARRA DINÁMICA DE TIENDAS -->
+        <section class="py-12 bg-black/60 border-y border-white/10 overflow-hidden relative">
+            <div class="absolute inset-0 bg-sky-500/5"></div>
+            <div class="max-w-7xl mx-auto px-4 grid md:grid-cols-3 gap-8 items-center relative z-10">
+                
+                <!-- Texto Izquierda -->
+                <div class="text-right hidden md:block">
+                    <p class="text-white font-bold text-xl">¿Compras en USA?</p>
+                    <p class="text-sky-400 text-sm">Nosotros lo traemos</p>
+                </div>
+
+                <!-- Centro: Tiendas Rotativas -->
+                <div class="text-center">
+                    <p class="text-sm text-gray-400 uppercase tracking-[0.3em] mb-2 font-bold flex items-center justify-center gap-3">
+                        <span class="w-8 h-px bg-yellow-400"></span> Compra seguro en <span class="w-8 h-px bg-yellow-400"></span>
+                    </p>
+                    <div id="dynamic-store" aria-live="off" class="text-4xl md:text-6xl font-black text-white font-tech h-16 flex items-center justify-center drop-shadow-[0_0_10px_rgba(255,255,255,0.3)]"></div>
+                </div>
+
+                <!-- IMAGEN COMPRAS (Derecha) -->
+                <div class="hidden md:flex items-center gap-4">
+                    <img src="imagenes/compras-online.jpeg" alt="Persona comprando en Amazon y eBay con tarjeta" class="w-24 h-16 object-cover rounded-lg border border-white/20 opacity-80 hover:opacity-100 transition-opacity">
+                    <p class="text-xs text-gray-400 max-w-[150px]">Asesoría paso a paso en tus compras internacionales.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SERVICIOS -->
+        <section class="py-24 px-4 md:px-8 max-w-7xl mx-auto">
+            <div class="border-l-8 border-sky-500 pl-8 mb-12">
+                <h2 class="text-4xl md:text-6xl font-black text-white font-tech uppercase leading-none">Nuestros <br><span class="text-sky-400">Servicios</span></h2>
+                <p class="text-gray-300 mt-2 italic text-sm font-medium">*Tipo de cambio referencia: ₡510</p>
+            </div>
+
+            <!-- IMAGEN AÉREO O MARÍTIMO (Destacada) -->
+            <div class="mb-16 rounded-[2rem] overflow-hidden shadow-2xl border border-white/10 relative group">
+                <img src="imagenes/aereo-maritimo.jpeg" alt="Composición artística de avión y barco de carga al atardecer" class="w-full h-[250px] md:h-[400px] object-cover group-hover:scale-105 transition-transform duration-700">
+                <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-80"></div>
+                <div class="absolute bottom-6 left-6 md:bottom-10 md:left-10">
+                    <span class="bg-yellow-400 text-black px-4 py-1 rounded-full text-xs font-bold uppercase mb-2 inline-block">Logística Integral</span>
+                    <h3 class="text-2xl md:text-4xl font-black text-white uppercase">¿Aéreo o Marítimo?</h3>
+                    <p class="text-gray-200 text-sm md:text-base mt-2">Adaptamos el transporte a tus necesidades de tiempo y presupuesto.</p>
+                </div>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- AÉREO -->
+                <div class="glass-card p-8 rounded-[2rem] relative overflow-hidden group border-t-[6px] border-t-sky-500">
+                    <i class="fas fa-plane-departure text-8xl text-sky-400 absolute -right-5 -top-5 opacity-10"></i>
+                    <h3 class="text-2xl font-black text-white mb-4 uppercase font-tech">Aéreo</h3>
+                    <div class="flex flex-col mb-6">
+                        <span class="text-5xl font-black text-white tracking-tighter">$7</span>
+                        <span class="text-xl text-sky-400 font-bold tracking-tighter">₡3,570</span>
+                        <span class="text-sm text-gray-300">/ Libra</span>
+                    </div>
+                    <ul class="space-y-3 text-gray-200 text-sm font-medium">
+                        <li><i class="fas fa-check text-sky-400 mr-2"></i> Tránsito: 3-7 días hábiles</li>
+                        <li><i class="fas fa-check text-sky-400 mr-2"></i> Impuestos y trámites incluidos</li>
+                        <li><i class="fas fa-check text-sky-400 mr-2"></i> Permisos de salud incluidos</li>
+                    </ul>
+                </div>
+
+                <!-- MARÍTIMO -->
+                <div class="glass-card p-8 rounded-[2rem] relative overflow-hidden group border-t-[6px] border-t-yellow-400">
+                    <i class="fas fa-ship text-8xl text-yellow-400 absolute -right-5 -top-5 opacity-10"></i>
+                    <h3 class="text-2xl font-black text-white mb-4 uppercase font-tech">Marítimo</h3>
+                    <div class="flex flex-col mb-4 border-b border-white/10 pb-4">
+                        <div class="flex items-baseline gap-2">
+                            <span class="text-3xl font-black text-white">$9</span>
+                            <span class="text-lg text-yellow-400 font-bold">₡4,590</span>
+                            <span class="text-xs font-normal text-gray-300">/ Kilo</span>
+                        </div>
+                        <div class="flex items-baseline gap-2 mt-2">
+                            <span class="text-3xl font-black text-white">$30</span>
+                            <span class="text-lg text-yellow-400 font-bold">₡15,300</span>
+                            <span class="text-xs font-normal text-gray-300">/ Pie Cúbico</span>
+                        </div>
+                    </div>
+                    <ul class="space-y-3 text-gray-200 text-sm font-medium">
+                        <li><i class="fas fa-check text-yellow-400 mr-2"></i> Tránsito: 15-22 días</li>
+                        <li><i class="fas fa-check text-yellow-400 mr-2"></i> Ideal carga pesada/voluminosa</li>
+                        <li><i class="fas fa-exclamation-circle text-yellow-400 mr-2"></i> Seguro por daño: NO aplica</li>
+                    </ul>
+                </div>
+
+                <!-- VEHÍCULOS -->
+                <div class="glass-card p-8 rounded-[2rem] relative overflow-hidden group border-t-[6px] border-t-green-500">
+                    <i class="fas fa-car text-8xl text-green-500 absolute -right-5 -top-5 opacity-10"></i>
+                    <h3 class="text-2xl font-black text-white mb-4 uppercase font-tech">Vehículos</h3>
+                    <p class="text-gray-200 text-sm mb-6 font-medium">Logística especializada para importación de todo tipo de vehículos.</p>
+                    <ul class="space-y-3 text-gray-200 text-sm font-medium">
+                        <li><i class="fas fa-check text-green-400 mr-2"></i> Importación de Vehículos</li>
+                        <li><i class="fas fa-check text-green-400 mr-2"></i> Inscripción oficial</li>
+                        <li><i class="fas fa-check text-green-400 mr-2"></i> Exoneración de impuestos</li>
+                        <li><i class="fas fa-check text-green-400 mr-2"></i> Trámite aduanal completo</li>
+                    </ul>
+                    <a href="https://wa.me/50660103131" class="mt-6 block text-center bg-white/10 hover:bg-green-500 hover:text-black py-2 rounded-lg transition-colors text-xs font-bold uppercase">Cotizar Vehículo</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- CALCULADORA -->
+        <section id="calculadora" class="py-20 bg-slate-900 border-y border-white/5 relative">
+            <div class="max-w-5xl mx-auto px-4">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-5xl font-black text-white font-tech uppercase">Calculadora <span class="text-yellow-400">Estimada</span></h2>
+                    <p class="text-gray-400 mt-2">Cotiza tu envío Aéreo o Marítimo al instante.</p>
+                </div>
+
+                <div class="glass-card p-8 md:p-12 rounded-3xl bg-[#030712]">
+                    <div class="grid md:grid-cols-2 gap-10">
+                        <div class="space-y-6">
+                            <div>
+                                <label class="block text-sky-400 text-sm font-bold mb-2 uppercase">Peso del Paquete</label>
+                                <div class="flex gap-2">
+                                    <input type="text" inputmode="decimal" id="calc-weight" placeholder="Ej: 5.5 o 10,2" class="w-full bg-slate-800 border border-slate-600 rounded-lg p-3 text-white focus:border-sky-500 focus:outline-none">
+                                    <select id="calc-weight-unit" class="bg-slate-800 border border-slate-600 rounded-lg p-3 text-white">
+                                        <option value="lb">Libras (lb)</option>
+                                        <option value="kg">Kilos (kg)</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div>
+                                <label class="block text-sky-400 text-sm font-bold mb-2 uppercase">Dimensiones (Largo x Ancho x Alto)</label>
+                                <div class="flex gap-2 mb-2">
+                                    <input type="text" inputmode="decimal" id="calc-l" placeholder="Largo" class="w-full bg-slate-800 border border-slate-600 rounded-lg p-3 text-white text-center">
+                                    <input type="text" inputmode="decimal" id="calc-w" placeholder="Ancho" class="w-full bg-slate-800 border border-slate-600 rounded-lg p-3 text-white text-center">
+                                    <input type="text" inputmode="decimal" id="calc-h" placeholder="Alto" class="w-full bg-slate-800 border border-slate-600 rounded-lg p-3 text-white text-center">
+                                </div>
+                                <select id="calc-dim-unit" class="w-full bg-slate-800 border border-slate-600 rounded-lg p-3 text-white">
+                                    <option value="inch">Pulgadas (inch)</option>
+                                    <option value="cm">Centímetros (cm)</option>
+                                </select>
+                            </div>
+
+                            <button onclick="calculateShipping()" class="w-full bg-yellow-400 text-black font-black py-4 rounded-xl hover:bg-white transition-colors uppercase tracking-wider shadow-[0_0_20px_rgba(250,204,21,0.4)]">
+                                <i class="fas fa-calculator mr-2"></i> Calcular Costo
+                            </button>
+                        </div>
+
+                        <div class="bg-slate-800/50 rounded-2xl p-6 border border-white/5 flex flex-col justify-center relative">
+                            <div id="result-placeholder" class="text-center text-gray-500">
+                                <i class="fas fa-box-open text-4xl mb-4 opacity-30"></i>
+                                <p>Ingresa los datos para ver el estimado en Dólares y Colones.</p>
+                            </div>
+                            
+                            <div id="result-container" class="hidden space-y-6">
+                                <div class="border-b border-white/10 pb-4">
+                                    <p class="text-sky-400 text-xs font-bold uppercase mb-1"><i class="fas fa-plane"></i> Opción Aérea</p>
+                                    <div class="flex flex-col items-end">
+                                        <span id="res-air-usd" class="text-2xl font-black text-white">$0.00</span>
+                                        <span id="res-air-crc" class="text-xl font-bold text-sky-400">₡0</span>
+                                    </div>
+                                    <p class="text-[10px] text-gray-400 mt-1">*Precio basado en peso real (7$/lb).</p>
+                                </div>
+                                <div>
+                                    <p class="text-yellow-400 text-xs font-bold uppercase mb-1"><i class="fas fa-ship"></i> Opción Marítima</p>
+                                    <div class="flex flex-col items-end">
+                                        <span id="res-sea-usd" class="text-2xl font-black text-white">$0.00</span>
+                                        <span id="res-sea-crc" class="text-xl font-bold text-yellow-400">₡0</span>
+                                    </div>
+                                    <p id="res-sea-detail" class="text-[10px] text-gray-400 mt-1 italic">Calculado por volumen/peso.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <p class="text-center text-xs text-gray-500 mt-6">*Precios aproximados en USD y Colones (T.C. 510). Aplican restricciones.</p>
+            </div>
+        </section>
+
+        <!-- DIRECCIONES (COPIAR Y PEGAR) - ACTUALIZADO CON FORMATO EXACTO -->
+        <section id="direcciones" class="py-24 px-4 md:px-8 max-w-7xl mx-auto">
+            <h2 class="text-3xl md:text-5xl font-black text-center text-white font-tech mb-16 uppercase">Tus Direcciones <span class="text-sky-500">en Miami</span></h2>
+            
+            <div class="grid md:grid-cols-2 gap-10">
+                <!-- AÉREA -->
+                <div class="bg-[#050b14] p-8 md:p-10 rounded-[2rem] border border-sky-500/30 relative group">
+                    <div class="absolute top-0 right-0 bg-sky-500 text-black px-4 py-2 rounded-bl-xl rounded-tr-[2rem] font-bold text-xs uppercase">Rápido</div>
+                    <h3 class="text-2xl font-bold text-white mb-6 flex items-center gap-3">
+                        <i class="fas fa-plane-up text-sky-400"></i> Casillero Aéreo
+                    </h3>
+                    <div class="space-y-1 font-mono text-gray-300 text-sm md:text-base border-l-2 border-sky-500/20 pl-4">
+                        <p><span class="text-gray-500 font-bold">Nombre:</span> TMCR - (Tu Nombre)</p>
+                        <p><span class="text-gray-500 font-bold">Dirección:</span> 9950 NW 17th St</p>
+                        <p><span class="text-gray-500 font-bold">Dirección Línea 2:</span> SJO 604541</p>
+                        <p><span class="text-gray-500 font-bold">Estado:</span> Florida</p>
+                        <p><span class="text-gray-500 font-bold">Ciudad:</span> Miami</p>
+                        <p><span class="text-gray-500 font-bold">Código Postal:</span> 33172</p>
+                        <p><span class="text-gray-500 font-bold">Teléfono:</span> 7863914404</p>
+                    </div>
+                    <button class="mt-8 w-full py-3 border border-sky-500/50 text-sky-400 rounded-xl hover:bg-sky-500 hover:text-black transition-all uppercase text-xs font-bold tracking-widest" onclick="navigator.clipboard.writeText('9950 NW 17th St, SJO 604541, Miami, FL 33172, 7863914404'); alert('Dirección Aérea copiada!');">
+                        <i class="far fa-copy mr-2"></i> Copiar Dirección
+                    </button>
+                </div>
+
+                <!-- MARÍTIMA -->
+                <div class="bg-[#050b14] p-8 md:p-10 rounded-[2rem] border border-yellow-400/30 relative group">
+                    <div class="absolute top-0 right-0 bg-yellow-400 text-black px-4 py-2 rounded-bl-xl rounded-tr-[2rem] font-bold text-xs uppercase">Pesado / Volumen</div>
+                    <h3 class="text-2xl font-bold text-white mb-6 flex items-center gap-3">
+                        <i class="fas fa-ship text-yellow-400"></i> Casillero Marítimo
+                    </h3>
+                    <div class="space-y-1 font-mono text-gray-300 text-sm md:text-base border-l-2 border-yellow-400/20 pl-4">
+                        <p><span class="text-gray-500 font-bold">Nombre:</span> TMCR-Marítimo (Tu Nombre)</p>
+                        <p><span class="text-gray-500 font-bold">Dirección:</span> 8432 NW 66TH St</p>
+                        <p><span class="text-gray-500 font-bold">Dirección Línea 2:</span> 7500</p>
+                        <p><span class="text-gray-500 font-bold">Ciudad:</span> Miami</p>
+                        <p><span class="text-gray-500 font-bold">Estado:</span> Florida</p>
+                        <p><span class="text-gray-500 font-bold">Código Postal:</span> 33166-2629</p>
+                        <p><span class="text-gray-500 font-bold">País:</span> Estados Unidos</p>
+                        <p><span class="text-gray-500 font-bold">Número de teléfono:</span> 7863914404</p>
+                    </div>
+                    <button class="mt-8 w-full py-3 border border-yellow-400/50 text-yellow-400 rounded-xl hover:bg-yellow-400 hover:text-black transition-all uppercase text-xs font-bold tracking-widest" onclick="navigator.clipboard.writeText('8432 NW 66TH St, 7500, Miami, FL 33166-2629, 7863914404'); alert('Dirección Marítima copiada!');">
+                        <i class="far fa-copy mr-2"></i> Copiar Dirección
+                    </button>
+                </div>
+            </div>
+            <p class="text-center text-xs text-red-400 mt-8 font-bold"><i class="fas fa-exclamation-triangle"></i> IMPORTANTE: Usa la dirección correcta según el tipo de envío que desees.</p>
+        </section>
+
+        <!-- REGISTRO Y GENERADOR DE CASILLERO (NUEVO) -->
+        <section id="registro" class="py-24 px-4 md:px-8 bg-gradient-to-b from-[#050b14] to-[#030712] border-y border-white/5 relative overflow-hidden">
+            <div class="absolute top-0 right-0 w-full h-full bg-[url('imagenes/mapa-cobertura.jpeg')] opacity-5 bg-cover bg-center"></div>
+            <div class="max-w-4xl mx-auto relative z-10">
+                <div class="text-center mb-12">
+                    <span class="bg-green-500/20 text-green-400 px-4 py-1 rounded-full text-xs font-bold uppercase tracking-widest border border-green-500/30">¡Empieza Aquí!</span>
+                    <h2 class="text-3xl md:text-5xl font-black text-white font-tech mt-6 uppercase">Tu Casillero <span class="text-sky-500">Gratis</span></h2>
+                    <p class="text-gray-300 mt-4 text-lg">Ingresa tus datos para generar tus direcciones exactas y quedar registrado.</p>
+                </div>
+
+                <div class="glass-card p-8 md:p-12 rounded-[2.5rem] border border-sky-500/30 shadow-[0_0_50px_rgba(14,165,233,0.1)]">
+                    
+                    <!-- FORMULARIO ACTUALIZADO -->
+                    <form id="locker-form" class="space-y-6">
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div class="space-y-2">
+                                <label class="text-sm font-bold text-gray-400 uppercase ml-2">Nombre</label>
+                                <input type="text" id="client-name" name="Nombre" required placeholder="Ej: Juan" class="w-full bg-black/40 border border-white/10 rounded-xl p-4 text-white focus:border-sky-500 focus:outline-none transition-all">
+                            </div>
+                            <div class="space-y-2">
+                                <label class="text-sm font-bold text-gray-400 uppercase ml-2">Apellido</label>
+                                <input type="text" id="client-lastname" name="Apellido" required placeholder="Ej: Pérez" class="w-full bg-black/40 border border-white/10 rounded-xl p-4 text-white focus:border-sky-500 focus:outline-none transition-all">
+                            </div>
+                        </div>
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div class="space-y-2">
+                                <label class="text-sm font-bold text-gray-400 uppercase ml-2">WhatsApp</label>
+                                <input type="tel" id="client-phone" name="Telefono" required placeholder="8888-8888" class="w-full bg-black/40 border border-white/10 rounded-xl p-4 text-white focus:border-sky-500 focus:outline-none transition-all">
+                            </div>
+                            <div class="space-y-2">
+                                <label class="text-sm font-bold text-gray-400 uppercase ml-2">Correo</label>
+                                <input type="email" id="client-email" name="Correo" required placeholder="tu@correo.com" class="w-full bg-black/40 border border-white/10 rounded-xl p-4 text-white focus:border-sky-500 focus:outline-none transition-all">
+                            </div>
+                        </div>
+                        <div class="space-y-2">
+                            <label class="text-sm font-bold text-gray-400 uppercase ml-2">Dirección de Entrega en CR</label>
+                            <textarea id="client-address-cr" name="Direccion_CR" required placeholder="Provincia, Cantón, Distrito y señas exactas..." class="w-full bg-black/40 border border-white/10 rounded-xl p-4 text-white focus:border-sky-500 focus:outline-none transition-all h-24"></textarea>
+                        </div>
+
+                        <button type="submit" id="submit-btn" class="w-full bg-gradient-to-r from-sky-500 to-blue-600 text-white font-black py-5 rounded-xl hover:shadow-[0_0_30px_rgba(14,165,233,0.4)] transition-all uppercase tracking-widest text-lg transform hover:-translate-y-1">
+                            <i class="fas fa-magic mr-2"></i> Registrar y Ver Direcciones
+                        </button>
+                    </form>
+
+                    <!-- RESULTADO (TARJETAS FORMATO TIENDA ACTUALIZADO) -->
+                    <div id="locker-result" class="hidden mt-10 animate-[fadeIn_0.5s_ease-out]">
+                        <div class="bg-green-500/10 border border-green-500/30 p-4 rounded-xl text-center mb-8">
+                            <p class="text-green-400 font-bold"><i class="fas fa-check-circle mr-2"></i> ¡Registro Exitoso! Copia estos datos en tu tienda favorita. Te enviamos una copia a tu correo.</p>
+                        </div>
+
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <!-- AÉREO -->
+                            <div class="bg-[#0b1121] p-6 rounded-2xl border border-sky-500/40 relative overflow-hidden">
+                                <div class="absolute top-0 right-0 bg-sky-600 text-white text-[10px] font-bold px-3 py-1 rounded-bl-lg">AÉREO</div>
+                                <h4 class="text-white font-bold mb-4 border-b border-white/10 pb-2">Datos para Aéreo:</h4>
+                                <div class="space-y-1 font-mono text-gray-300 text-sm">
+                                    <p><span class="text-gray-500 font-bold">Nombre:</span> TMCR - <span class="dynamic-name text-sky-400">NOMBRE</span></p>
+                                    <p><span class="text-gray-500 font-bold">Dirección:</span> 9950 NW 17th St</p>
+                                    <p><span class="text-gray-500 font-bold">Dirección Línea 2:</span> SJO 604541</p>
+                                    <p><span class="text-gray-500 font-bold">Estado:</span> Florida</p>
+                                    <p><span class="text-gray-500 font-bold">Ciudad:</span> Miami</p>
+                                    <p><span class="text-gray-500 font-bold">Código Postal:</span> 33172</p>
+                                    <p><span class="text-gray-500 font-bold">Teléfono:</span> 7863914404</p>
+                                </div>
+                            </div>
+
+                            <!-- MARÍTIMO -->
+                            <div class="bg-[#0b1121] p-6 rounded-2xl border border-yellow-500/40 relative overflow-hidden">
+                                <div class="absolute top-0 right-0 bg-yellow-500 text-black text-[10px] font-bold px-3 py-1 rounded-bl-lg">MARÍTIMO</div>
+                                <h4 class="text-white font-bold mb-4 border-b border-white/10 pb-2">Datos para Marítimo:</h4>
+                                <div class="space-y-1 font-mono text-gray-300 text-sm">
+                                    <p><span class="text-gray-500 font-bold">Nombre:</span> TMCR-Marítimo <span class="dynamic-name text-yellow-400">NOMBRE</span></p>
+                                    <p><span class="text-gray-500 font-bold">Dirección:</span> 8432 NW 66TH St</p>
+                                    <p><span class="text-gray-500 font-bold">Dirección Línea 2:</span> 7500</p>
+                                    <p><span class="text-gray-500 font-bold">Ciudad:</span> Miami</p>
+                                    <p><span class="text-gray-500 font-bold">Estado:</span> Florida</p>
+                                    <p><span class="text-gray-500 font-bold">Código postal:</span> 33166-2629</p>
+                                    <p><span class="text-gray-500 font-bold">País:</span> Estados Unidos</p>
+                                    <p><span class="text-gray-500 font-bold">Número de teléfono:</span> 7863914404</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- INFO SEGUROS -->
+        <section class="py-20 px-4 md:px-8 max-w-6xl mx-auto">
+            <div class="glass-card rounded-[3rem] p-8 md:p-16 relative overflow-hidden bg-[#050a14] border border-white/5">
+                <div class="grid md:grid-cols-2 gap-14 relative z-10">
+                    <div>
+                        <h4 class="text-xl font-bold text-sky-400 mb-6 uppercase tracking-wider flex items-center gap-3">
+                            <i class="fas fa-shield-alt text-2xl"></i> Seguro Tecnología
+                        </h4>
+                        <div class="space-y-4">
+                            <!-- IMAGEN 5: IMPORTAR TECNOLOGIA -->
+                            <img src="imagenes/importar-tecnologia.jpeg" alt="Equipo de sonido Denon en caja, tecnología delicada" class="w-full h-32 object-cover rounded-xl opacity-60 mb-4 border border-white/10">
+                            
+                            <div class="flex justify-between items-center bg-white/5 p-5 rounded-xl border border-white/5">
+                                <span class="font-bold text-white"><i class="fas fa-mobile-alt mr-3 text-gray-400"></i> Celulares</span>
+                                <div class="text-right">
+                                    <span class="block font-black text-yellow-400 text-xl">$50.00</span>
+                                </div>
+                            </div>
+                            <div class="flex justify-between items-center bg-white/5 p-5 rounded-xl border border-white/5">
+                                <span class="font-bold text-white"><i class="fas fa-laptop mr-3 text-gray-400"></i> Laptops</span>
+                                <div class="text-right">
+                                    <span class="block font-black text-yellow-400 text-xl">$25.00</span>
+                                </div>
+                            </div>
+                            <p class="text-xs text-gray-400 mt-2 ml-1">
+                                <i class="fas fa-info-circle text-yellow-400"></i> Pre-alerta obligatoria.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h4 class="text-xl font-bold text-sky-400 mb-6 uppercase tracking-wider flex items-center gap-3">
+                            <i class="fas fa-truck text-2xl"></i> Logística Local
+                        </h4>
+                        <!-- IMAGEN 6: MAPA COBERTURA -->
+                        <img src="imagenes/mapa-cobertura.jpeg" alt="Mapa de Costa Rica mostrando rutas de entrega a todo el país" class="w-full h-48 object-cover object-top rounded-xl mb-6 border border-white/10 hover:opacity-100 opacity-80 transition-opacity">
+                        
+                        <div class="bg-white/5 p-6 rounded-2xl border border-white/5 space-y-5">
+                            <div>
+                                <strong class="text-white block text-lg mb-1 flex items-center gap-2"><i class="fas fa-city text-sm text-sky-500"></i> Dentro del GAM</strong>
+                                <p class="text-gray-300 text-sm">Entregas a domicilio en San José, Alajuela y Heredia <span class="text-yellow-400 font-bold">INCLUIDAS</span>.</p>
+                            </div>
+                            <div class="border-t border-white/10 pt-4">
+                                <strong class="text-white block text-lg mb-1 flex items-center gap-2"><i class="fas fa-map-marked-alt text-sm text-sky-500"></i> Fuera del GAM</strong>
+                                <p class="text-gray-300 text-sm mb-2">Encomienda gratuita si el paquete pesa <span class="text-green-400 font-bold">+8 Libras</span>.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PREGUNTAS FRECUENTES -->
+        <section class="py-24 px-4 md:px-8 bg-[#030712] relative z-10">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-3xl md:text-5xl font-black text-center text-white font-tech mb-16 uppercase">Preguntas <span class="text-yellow-400">Frecuentes</span></h2>
+                
+                <div class="space-y-4">
+                    <!-- Pregunta 1 -->
+                    <div class="glass-card rounded-2xl p-6 hover:border-yellow-400/50 transition-colors">
+                        <details class="group">
+                            <summary class="flex justify-between items-center font-bold cursor-pointer list-none text-white text-lg">
+                                <span>¿Puedo traer perfumes, cremas y maquillaje?</span>
+                                <span class="transition group-open:rotate-180 text-yellow-400"><i class="fas fa-chevron-down"></i></span>
+                            </summary>
+                            <div class="text-gray-300 mt-4 leading-relaxed font-light text-sm">
+                                <strong class="text-green-400 uppercase">¡SÍ!</strong> A diferencia de otros couriers, en TMCR somos expertos en manejo de carga especial. Puedes importar tus cosméticos, cremas y perfumes sin inconvenientes por medio de nuestro servicio aéreo o marítimo.
+                            </div>
+                        </details>
+                    </div>
+
+                    <!-- Pregunta 2 -->
+                    <div class="glass-card rounded-2xl p-6 hover:border-red-400/50 transition-colors">
+                        <details class="group">
+                            <summary class="flex justify-between items-center font-bold cursor-pointer list-none text-white text-lg">
+                                <span>¿Qué artículos están PROHIBIDOS?</span>
+                                <span class="transition group-open:rotate-180 text-red-400"><i class="fas fa-chevron-down"></i></span>
+                            </summary>
+                            <div class="text-gray-300 mt-4 leading-relaxed font-light text-sm">
+                                Por regulaciones aduanales y de seguridad, <strong class="text-red-400">NO</strong> transportamos: Armas (de fuego o balines), drogas o estupefacientes, dinero en efectivo, explosivos o materiales inflamables peligrosos.
+                            </div>
+                        </details>
+                    </div>
+
+                    <!-- Pregunta 3 -->
+                    <div class="glass-card rounded-2xl p-6 hover:border-sky-400/50 transition-colors">
+                        <details class="group">
+                            <summary class="flex justify-between items-center font-bold cursor-pointer list-none text-white text-lg">
+                                <span>¿Cómo hago la Pre-Alerta de electrónicos?</span>
+                                <span class="transition group-open:rotate-180 text-sky-400"><i class="fas fa-chevron-down"></i></span>
+                            </summary>
+                            <div class="text-gray-300 mt-4 leading-relaxed font-light text-sm">
+                                Para celulares, tablets y computadoras, envíanos la factura comercial y el número de tracking a nuestro <a href="https://wa.me/50660103131" class="text-yellow-400 underline">WhatsApp</a> o al correo <strong>logisticatmcr@gmail.com</strong> antes de que llegue a Miami.
+                            </div>
+                        </details>
+                    </div>
+                    
+                    <!-- Pregunta 4 -->
+                    <div class="glass-card rounded-2xl p-6 hover:border-sky-400/50 transition-colors">
+                        <details class="group">
+                            <summary class="flex justify-between items-center font-bold cursor-pointer list-none text-white text-lg">
+                                <span>¿Cómo rastreo mi paquete?</span>
+                                <span class="transition group-open:rotate-180 text-sky-400"><i class="fas fa-chevron-down"></i></span>
+                            </summary>
+                            <div class="text-gray-300 mt-4 leading-relaxed font-light text-sm">
+                                Para conocer el estatus actual de tu carga, puedes escribirnos directamente a nuestro WhatsApp de Servicio al Cliente con tu nombre y número de guía.
+                            </div>
+                        </details>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TESTIMONIOS -->
+        <section class="py-24 px-4 md:px-8 bg-[#02050a] border-y border-white/5">
+            <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-12">
+                <!-- IMAGEN 7: REPARTIDOR EXPERTO -->
+                <div class="w-full md:w-1/3">
+                    <img src="imagenes/repartidor-experto.jpeg" alt="Repartidor de TMCR entregando paquetes de Amazon y Ebay" class="rounded-3xl shadow-2xl border-2 border-yellow-400/20 rotate-3 hover:rotate-0 transition-transform duration-500">
+                </div>
+                
+                <div class="w-full md:w-2/3 text-center md:text-left">
+                    <h2 class="text-3xl md:text-5xl font-black text-white font-tech mb-8 uppercase tracking-wide">Experiencias Reales</h2>
+                    <div id="testimonials-container" aria-live="off" class="min-h-[160px] flex items-center justify-center bg-[#0a0f1e] p-8 rounded-3xl border border-sky-900/30"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SOBRE NOSOTROS -->
+        <section class="py-20 px-4 md:px-8 max-w-7xl mx-auto">
+            <div class="bg-[#0a0f1e]/90 border-l-8 border-sky-500 p-8 md:p-12 rounded-r-3xl backdrop-blur-md shadow-2xl">
+                <h3 class="text-2xl md:text-4xl font-black text-white mb-8 uppercase font-tech">Nuestra <span class="text-yellow-400">Identidad</span></h3>
+                
+                <div class="grid md:grid-cols-3 gap-8 text-gray-200">
+                    <div>
+                        <strong class="text-sky-400 uppercase tracking-widest block mb-2"><i class="fas fa-bullseye mr-2"></i> Misión</strong>
+                        <p class="text-sm leading-relaxed text-justify">Comprometidos en brindar un Servicio de Aduanas que satisface totalmente sus expectativas con un alto nivel de calidad, puntualidad, seguridad y comodidad.</p>
+                    </div>
+                    <div>
+                        <strong class="text-sky-400 uppercase tracking-widest block mb-2"><i class="fas fa-eye mr-2"></i> Visión</strong>
+                        <p class="text-sm leading-relaxed text-justify">Ser líderes reconocidos a nivel nacional e internacional como una Agencia de Servicios Aduanales de excelencia.</p>
+                    </div>
+                    <div>
+                        <strong class="text-sky-400 uppercase tracking-widest block mb-2"><i class="fas fa-heart mr-2"></i> Valores</strong>
+                        <ul class="text-sm space-y-2">
+                            <li><span class="text-yellow-400 font-bold">Pasión:</span> Excelencia en cada servicio.</li>
+                            <li><span class="text-yellow-400 font-bold">Calidad:</span> Servicio garantizado.</li>
+                            <li><span class="text-yellow-400 font-bold">Responsabilidad:</span> Trabajamos de forma eficiente.</li>
+                            <li><span class="text-yellow-400 font-bold">Transparencia:</span> Integridad y honestidad siempre.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- GALERÍA INFORMATIVA (CARRUSEL DE RESPALDO) - NUEVA SECCIÓN -->
+        <section class="py-12 bg-black border-t border-white/5">
+            <div class="max-w-4xl mx-auto px-4 text-center">
+                <h3 class="text-gray-400 uppercase tracking-[0.2em] text-sm font-bold mb-8">Información Adicional</h3>
+                <!-- Contenedor del Carrusel -->
+                <div class="relative w-full h-[400px] md:h-[500px] rounded-2xl overflow-hidden border border-white/10 bg-[#050b14] flex items-center justify-center">
+                    <!-- La imagen cambiará automáticamente con el script de abajo -->
+                    <img id="info-carousel" src="imagenes/camioneta-servicios.jpeg" alt="Información adicional de servicios TMCR" class="max-h-full max-w-full object-contain transition-opacity duration-1000">
+                </div>
+            </div>
+        </section>
+
+        <!-- FOOTER -->
+        <footer class="bg-[#010205] pt-24 pb-12 border-t border-sky-900/30">
+            <div class="max-w-7xl mx-auto px-4 md:px-8 text-center">
+                <h2 class="text-4xl md:text-6xl font-black font-tech text-white mb-16 uppercase tracking-tight">Contactar <span class="text-sky-500">Ahora</span></h2>
+                
+                <div class="flex flex-wrap justify-center gap-8 md:gap-12 mb-20">
+                    <a href="https://wa.me/50660103131" class="group flex flex-col items-center gap-4 w-28">
+                        <div class="w-20 h-20 bg-green-600 rounded-2xl flex items-center justify-center text-4xl text-white shadow-lg group-hover:-translate-y-2 transition-transform duration-300"><i class="fab fa-whatsapp"></i></div>
+                        <span class="text-xs font-bold text-gray-400 group-hover:text-green-400 uppercase tracking-widest">WhatsApp</span>
+                    </a>
+                    <a href="tel:60103131" class="group flex flex-col items-center gap-4 w-28">
+                        <div class="w-20 h-20 bg-sky-600 rounded-2xl flex items-center justify-center text-4xl text-white shadow-lg group-hover:-translate-y-2 transition-transform duration-300"><i class="fas fa-phone-alt"></i></div>
+                        <span class="text-xs font-bold text-gray-400 group-hover:text-sky-400 uppercase tracking-widest">Llamar</span>
+                    </a>
+                    <a href="https://www.facebook.com/share/1Ci6HxLVXN/?mibextid=wwXIfr" target="_blank" class="group flex flex-col items-center gap-4 w-28">
+                        <div class="w-20 h-20 bg-[#1877F2] rounded-2xl flex items-center justify-center text-4xl text-white shadow-lg group-hover:-translate-y-2 transition-transform duration-300"><i class="fab fa-facebook-f"></i></div>
+                        <span class="text-xs font-bold text-gray-400 group-hover:text-blue-400 uppercase tracking-widest">Facebook</span>
+                    </a>
+                    <a href="https://www.instagram.com/international_import_courier?igsh=ZzZsam92dnU5bmF3&utm_source=QR" target="_blank" class="group flex flex-col items-center gap-4 w-28">
+                        <div class="w-20 h-20 bg-gradient-to-tr from-yellow-500 via-red-500 to-purple-600 rounded-2xl flex items-center justify-center text-4xl text-white shadow-lg group-hover:-translate-y-2 transition-transform duration-300"><i class="fab fa-instagram"></i></div>
+                        <span class="text-xs font-bold text-gray-400 group-hover:text-pink-400 uppercase tracking-widest">Instagram</span>
+                    </a>
+                    <a href="https://www.tiktok.com/@transporte_tmcr" target="_blank" class="group flex flex-col items-center gap-4 w-28">
+                        <div class="w-20 h-20 bg-gray-800 border border-gray-600 rounded-2xl flex items-center justify-center text-4xl text-white shadow-lg group-hover:-translate-y-2 transition-transform duration-300"><i class="fab fa-tiktok"></i></div>
+                        <span class="text-xs font-bold text-gray-400 group-hover:text-white uppercase tracking-widest">TikTok</span>
+                    </a>
+                </div>
+
+                <div class="border-t border-white/10 pt-10 text-center text-gray-500 text-xs uppercase font-bold tracking-widest">
+                    <p class="mb-3 text-sky-400 text-sm normal-case font-mono"><i class="fas fa-envelope mr-2"></i> logisticatmcr@gmail.com</p>
+                    <p class="mb-4">San José, Costa Rica | Lunes a Sábado 7:00am - 5:00pm</p>
+                    <p class="opacity-40">© 2026 TMCR Import and Courier. Derechos Reservados.</p>
+                </div>
+            </div>
+        </footer>
+
+        <!-- WhatsApp Flotante -->
+        <a href="https://wa.me/50660103131" class="fixed bottom-6 right-6 z-50 bg-green-500 w-14 h-14 rounded-full flex items-center justify-center text-white text-3xl shadow-[0_0_20px_rgba(34,197,94,0.6)] hover:scale-110 transition-transform md:hidden animate-bounce">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+    </main>
+
+    <!-- LOGICA -->
+    <script src="js/script.js"></script>
+
+    <!-- Script Pequeño SOLO para el Carrusel de abajo (Para no tocar el script.js principal) -->
+    <script>
+        const infoImages = [
+            'imagenes/camioneta-servicios.jpeg',
+            'imagenes/info-resumen.jpeg',
+            'imagenes/dibujo-simple.jpeg'
+        ];
+        let infoIndex = 0;
+        const carouselImg = document.getElementById('info-carousel');
+        
+        // Cambia la imagen cada 20 segundos (20000 ms)
+        if(carouselImg){
+            setInterval(() => {
+                infoIndex = (infoIndex + 1) % infoImages.length;
+                // Efecto de desvanecimiento simple
+                carouselImg.style.opacity = 0;
+                setTimeout(() => {
+                    carouselImg.src = infoImages[infoIndex];
+                    carouselImg.style.opacity = 1;
+                }, 500);
+            }, 20000);
+        }
+    </script>
+</body>
+</html>

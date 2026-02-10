@@ -1,0 +1,210 @@
+/* --- CONFIGURACIÓN GENERAL --- */
+:root {
+    /* Paleta de Colores TMCR */
+    --dark-bg: #030712;       /* Azul muy oscuro (casi negro) */
+    --brand-blue: #0ea5e9;    /* Azul corporativo */
+    --neon-blue: #00f0ff;     /* Celeste brillante (Acentos) */
+    --neon-yellow: #facc15;   /* Amarillo marca (Llamativo) */
+    
+    /* Efecto Vidrio (Glassmorphism) */
+    --glass-bg: rgba(17, 24, 39, 0.7);
+    --glass-border: rgba(255, 255, 255, 0.1);
+}
+
+body {
+    font-family: 'Outfit', sans-serif;
+    background-color: var(--dark-bg);
+    color: #f3f4f6;
+    overflow-x: hidden;
+}
+
+/* Fuente tecnológica solo para títulos */
+.font-tech { 
+    font-family: 'Orbitron', sans-serif; 
+    letter-spacing: -0.02em;
+}
+
+/* Mejora de legibilidad y Accesibilidad (Letra más gruesa y clara) */
+.readable-text {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 400; /* Antes 300, ahora 400 para mejor lectura */
+    line-height: 1.8;
+    color: #e2e8f0; 
+    letter-spacing: 0.02em;
+}
+
+/* --- LOGO GIGANTE Y EFECTOS --- */
+.mega-logo {
+    text-shadow: 0 0 25px rgba(14, 165, 233, 0.4);
+    transition: all 0.3s ease;
+}
+
+.mega-logo:hover {
+    text-shadow: 0 0 40px rgba(250, 204, 21, 0.6);
+    color: #ffffff;
+}
+
+/* --- PRELOADER --- */
+#preloader {
+    position: fixed;
+    inset: 0;
+    background-color: var(--dark-bg);
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.5s ease-out, visibility 0.5s;
+}
+
+.loader-scan {
+    width: 200px;
+    height: 4px;
+    background: linear-gradient(90deg, transparent, var(--neon-blue), transparent);
+    margin-top: 20px;
+    animation: scan 1.5s infinite ease-in-out;
+}
+
+@keyframes scan {
+    0% { transform: scaleX(0); opacity: 0.5; }
+    50% { transform: scaleX(1); opacity: 1; }
+    100% { transform: scaleX(0); opacity: 0.5; }
+}
+
+/* --- ANIMACIONES DE FONDO (Accesibilidad: Respeta si el usuario pide reducir movimiento) --- */
+.bg-animation-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0;
+    overflow: hidden;
+}
+
+.floating-vehicle {
+    position: absolute;
+    opacity: 0.05;
+    color: var(--brand-blue);
+    filter: drop-shadow(0 0 5px var(--brand-blue));
+}
+
+.plane-move {
+    top: 15%;
+    left: -100px;
+    animation: flyAcross 45s infinite linear;
+}
+
+.ship-move {
+    bottom: 10%;
+    right: -100px;
+    animation: sailAcross 60s infinite linear;
+}
+
+/* Si el usuario tiene "Reducir Movimiento" activado en su celular/PC */
+@media (prefers-reduced-motion: reduce) {
+    .plane-move, .ship-move, .loader-scan, .pulse-action {
+        animation: none !important;
+        display: none;
+    }
+}
+
+@keyframes flyAcross {
+    0% { transform: translateX(-200px) translateY(0) rotate(5deg); }
+    100% { transform: translateX(120vw) translateY(-50px) rotate(5deg); }
+}
+
+@keyframes sailAcross {
+    0% { transform: translateX(200px); }
+    100% { transform: translateX(-120vw); }
+}
+
+/* --- GLASS CARDS --- */
+.glass-card {
+    background: var(--glass-bg);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid var(--glass-border);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.glass-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--brand-blue);
+    box-shadow: 0 10px 40px rgba(14, 165, 233, 0.15);
+}
+
+/* --- TEXTO DINÁMICO --- */
+.fade-text {
+    animation: fadeInOut 4s infinite;
+}
+
+@keyframes fadeInOut {
+    0%, 100% { opacity: 0; transform: translateY(10px); }
+    10%, 90% { opacity: 1; transform: translateY(0); }
+}
+
+/* --- EFECTOS DE TEXTO (NUEVO: Para que el título brille) --- */
+.text-glow-yellow {
+    text-shadow: 0 0 20px rgba(250, 204, 21, 0.5);
+}
+
+/* --- BOTONES GLOW --- */
+.btn-glow-blue { 
+    box-shadow: 0 0 15px rgba(14, 165, 233, 0.3); 
+    transition: all 0.3s ease; 
+}
+.btn-glow-blue:hover { 
+    box-shadow: 0 0 30px rgba(14, 165, 233, 0.6); 
+    transform: scale(1.02); 
+}
+
+.btn-glow-yellow { 
+    box-shadow: 0 0 15px rgba(250, 204, 21, 0.4); 
+    transition: all 0.3s ease; 
+}
+.btn-glow-yellow:hover { 
+    box-shadow: 0 0 30px rgba(250, 204, 21, 0.7); 
+    transform: scale(1.02); 
+}
+
+.pulse-action { animation: subtlePulse 3s infinite; }
+@keyframes subtlePulse {
+    0% { box-shadow: 0 0 0 0 rgba(250, 204, 21, 0.4); }
+    70% { box-shadow: 0 0 0 15px rgba(250, 204, 21, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(250, 204, 21, 0); }
+}
+
+/* --- TESTIMONIOS --- */
+.review-card {
+    animation: fadeIn 0.8s ease-in-out;
+}
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* --- ACORDEÓN DE PREGUNTAS (Estilo limpio) --- */
+details > summary {
+    list-style: none;
+}
+details > summary::-webkit-details-marker {
+    display: none;
+}
+
+/* --- SCROLLBAR PERSONALIZADO (NUEVO: Para que se vea profesional) --- */
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    background: var(--dark-bg); 
+}
+::-webkit-scrollbar-thumb {
+    background: #334155; 
+    border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: var(--brand-blue); 
+}
